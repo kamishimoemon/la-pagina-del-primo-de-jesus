@@ -1,0 +1,173 @@
+/*PUBLILAND GLOBAL FRAMEWORK V2.2 - AUTHORIZED PERSONNEL ONLY - EYES ONLY - W3C VALID*/
+HTML, BODY, DIV, SPAN, APPLET, OBJECT, IFRAME, H1, H2, H3, H4, H5, H6, P, BLOCKQUOTE, PRE, A, ABBR, ACRONYM, ADDRESS, BIG, CITE, 
+CODE, DEL, DFN, EM, IMG, INS, KBD, Q, S, SAMP, SMALL, STRIKE, STRONG, SUB, SUP, TT, VAR, B, U, I, CENTER, DL, DT, DD, OL, UL, LI, 
+FIELDSET, FORM, LABEL, LEGEND, TABLE, CAPTION, TBODY, TFOOT, THEAD, TR, TH, TD, ARTICLE, ASIDE, CANVAS, DETAILS, EMBED, FIGURE, 
+FIGCAPTION, FOOTER, HEADER, HGROUP, MENU, NAV, OUTPUT, RUBY, SECTION, SUMMARY, TIME, MARK, AUDIO, VIDEO, MAIN {margin: 0; padding: 0; border: 0 none; outline: 0; font-size: 100%; font: inherit; vertical-align: baseline; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+HTML {-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+BODY {font: 62.5% "source_sans_prolight", Arial, Helvetica, sans-serif; color: #000; background: #FFFFFF; height:100%; min-height:100%; line-height: 1}
+H1, H2, H3, H4, H5, H6 {font-weight: normal; font-size: 100%; display: block}
+ARTICLE, ASIDE, DETAILS, FIGCAPTION, FIGURE, FOOTER, HEADER, HGROUP, MENU, NAV, SECTION, MAIN {display: block; }
+TABLE {border-collapse: collapse; border-spacing: 0;}
+TH {text-align: left;}
+TD, TH {empty-cells: show}
+INPUT, SELECT, TEXTAREA { font: 1em "source_sans_proregular", Arial, Helvetica, sans-serif; color: #707070; background: #FFF; border: 1px solid #5e5e5e; border-radius: 2px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+INPUT:focus, TEXTAREA:focus { outline: none;}
+INPUT, SELECT { vertical-align: middle}
+INPUT[type="radio"], INPUT[type="checkbox"] {border: none; height: auto !important; width: auto !important; background: none; box-sizing: border-box;}
+INPUT[type="submit"], INPUT[type="reset"], INPUT[type="buttom"] {cursor: pointer; -webkit-appearance:none;}
+TEXTAREA {overflow:auto; -webkit-appearance:none; resize: none}
+INPUT::-moz-focus-inner {border: 0; padding: 0;}
+::-webkit-input-placeholder {color: #707070;}
+:-moz-placeholder {color: #707070; opacity: 1}
+::-moz-placeholder {color: #707070; opacity: 1}
+:-ms-input-placeholder { color: #707070;}
+UL, OL, LI {list-style: none;}
+IMG { vertical-align: top;}
+A {text-decoration: none; cursor:pointer; background: transparent;}
+STRONG { font-weight: bold}
+EM { font-style: italic}
+.Clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
+*+html .Clearfix {min-height: 1%;} /*IE7*/
+* html .Clearfix {height:1%;} /*IE6*/
+/*FIN FRAMEWORK*/
+
+/*MAIN STRUCTURE*/
+.Wrapper {text-align: left; margin: 0px auto; width: 950px;}
+
+HEADER { width: 100%; max-width: 1280px; margin: 0 auto; background: #ececec; height: 66px; overflow: hidden;}
+HEADER H1 { float: left; margin-left: 7px; padding-top: 5px;}
+HEADER H1 A { display: block; width: 113px; height: 55px; text-indent: -5000px; background: url(../images/layout/sprite.png) no-repeat 0 0;}
+/**/
+NAV { float: right}
+NAV LI { float: left}
+NAV LI A { display: block; height: 66px; font: 1.6em/20px "source_sans_proregular", Arial, Helvetica, sans-serif; color: #000; padding: 22px 20px 0px; letter-spacing: -1px; background: url(../images/layout/pipe.png) no-repeat left center }
+NAV LI A.Selected { background: #3471a6; color: #fff; font-family: "source_sans_prosemibold", Arial, Helvetica, sans-serif}
+NAV LI:first-child A { background-image: none;}
+/**/
+.Slider {width: 100%; max-width: 1280px; margin: 0 auto; overflow: hidden; height: 379px; background: #3471a6; color: #fff; position: relative}
+.Slider LI { width: 1280px; position: relative; float: left; overflow: hidden;}
+.Slider .Layer { position: absolute; left: 174px; top: 125px;}
+.Slider H2 { font: 4.6em/48px "source_sans_prosemibold", Arial, Helvetica, sans-serif; margin-bottom: 15px; }
+.Slider P {font: 2.5em/28px "source_sans_prosemibold", Arial, Helvetica, sans-serif; background: url(../images/layout/left-bracket.png) no-repeat; float: left; padding-left: 20px;}
+.Slider P SPAN { display: block; min-height: 39px; background: url(../images/layout/right-bracket.png) no-repeat right top; padding-right: 20px; padding-top: 6px;}
+.Slider P.Doble {background: url(../images/layout/left-bracket2.png) no-repeat;}
+.Slider P.Doble SPAN {background: url(../images/layout/right-bracket2.png) no-repeat right top; padding-bottom: 10px;}
+.Slider .Controls { position: absolute; bottom: 10px; left: 0; width: 100%; z-index: 100; text-align: center}
+.Slider .Controls A { display: inline-block; background: url(../images/layout/sprite.png) no-repeat -57px -64px; width: 14px; height: 15px; margin-left: 3px; margin-right: 3px}
+.Slider .Controls A.selected { background-position: -41px -64px}
+.Slider .Controls SPAN { display: none}
+/**/
+.Banners {width: 100%; max-width: 1280px; margin: 0 auto; overflow: hidden; padding-top: 36px}
+.Banners H2 { font: 3.8em/40px "source_sans_prosemibold", Arial, Helvetica, sans-serif; color: #747474; text-align: center; padding-bottom: 28px; }
+.BannerBox { padding-bottom: 30px; overflow: hidden; position: relative;}
+.BannerBox UL { margin-left: 68px;}
+.BannerBox LI { float: left; width: 276px; border-left: 1px solid #e9eaea; height: 340px; text-align: center; position: relative;}
+.BannerBox LI:first-child { border: none;}
+.BannerBox .Icon { display: block; margin: 0 auto; background: url(../images/layout/sprite.png) no-repeat;}
+.BannerBox .Icon1 {background-position: -296px 0; width: 93px; height: 90px; margin-bottom: 18px;}
+.BannerBox .Icon2 {background-position: -410px 0; width: 65px; height: 90px; margin-bottom: 18px;}
+.BannerBox .Icon3 {background-position: -500px 0; width: 83px; height: 82px; margin-bottom: 26px;}
+.BannerBox .Icon4 { background-position: -268px -110px; width: 110px; height: 88px; margin-bottom: 20px;}
+.BannerBox .Icon5 {background-position: -390px -110px; width: 91px; height: 90px; margin-bottom: 18px;}
+.BannerBox .Icon6 {background-position: -490px -110px; width: 96px; height: 90px; margin-bottom: 18px;}
+.BannerBox H4 { font: 2.2em/24px "source_sans_prosemibold", Arial, Helvetica, sans-serif; color: #3471a6; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 10px; }
+.BannerBox P { font-size: 1.8em; line-height: 21px; color: #5e5e5e; margin-left: 19px; margin-right: 19px;}
+.BannerBox .Btn { display: block; background: url(../images/layout/sprite.png) no-repeat -190px -35px; width: 37px; height: 37px; position: absolute; left: 50%; bottom: 20px; margin-left: -18px; text-indent: -5000px;}
+.BannerBox .Arrows { position: absolute; top: 130px; display: block; text-indent: -5000px; background: url(../images/layout/sprite.png) no-repeat; width: 34px; height: 67px;}
+.BannerBox .Prev { left: 0; background-position: -116px 0}
+.BannerBox .Next { right: 0; background-position: -152px 0}
+/**/
+.Frase {width: 100%; max-width: 1280px; margin: 0 auto; overflow: hidden; background: #052640 url(../images/layout/bg-frase.jpg) no-repeat center top; color: #fff; height: 254px; padding-top: 35px;}
+.Frase .Wrapper { text-align: center}
+.Frase .Icon { display: block; margin: 0 auto; width: 48px; height: 48px; background: url(../images/layout/sprite.png) no-repeat -235px 0; margin-bottom: 20px;}
+.Frase P { font-size: 2.84em; line-height: 38px; margin-bottom: 18px;}
+.Frase A { color: #fff; font: 2.9em/29px "source_sans_proregular", Arial, Helvetica, sans-serif; }
+.Frase A SPAN { font-size: 0.7em; line-height: 29px; letter-spacing: -1px; position: relative; top: -1px; margin-left: 4px; margin-right: 4px; text-transform: none}
+/**/
+FOOTER {width: 100%; max-width: 1280px; margin: 0 auto; overflow: hidden; background: #3b3b3b; color: #fff; height: 94px; border-top: 1px solid #fff;}
+FOOTER P { float: left; font-size: 1.4em; line-height: 18px; padding-top: 22px;}
+FOOTER P A { color: #fff;}
+FOOTER UL { float: right; margin-right: 34px; margin-top: 27px;}
+FOOTER LI { float: left}
+FOOTER LI A { display: block; width: 40px; height: 39px; text-indent: -5000px; background: url(../images/layout/sprite.png) no-repeat; margin-left: 8px;}
+FOOTER LI .FB { background-position: 0 -88px}
+FOOTER LI .LK { background-position: -42px -88px}
+FOOTER LI .EM { background-position: -84px -88px}
+
+/**/
+.MainPic { min-height: 169px; background: #ccc; width: 100%; max-width: 1280px; margin: 0 auto; overflow: hidden;}
+/**/
+ASIDE { float: left; width: 250px; background: #FBFBFB url(../images/layout/bg-nav-lateral.png); margin-top: 31px; margin-bottom: 31px; padding-bottom: 34px;}
+ASIDE .Icon { display: block; margin: 0 auto; background: url(../images/layout/sprite.png) no-repeat; margin-top: 20px; margin-bottom: 6px;}
+ASIDE .Empresa { background-position: -70px -150px; width: 48px; height: 53px;}
+ASIDE .Soluciones { background-position: -140px -150px; width: 34px; height: 60px;}
+ASIDE .Servicios { background-position: -190px -150px; width: 62px; height: 48px;}
+ASIDE .Tecnologia { background-position: 0px -150px; width: 56px; height: 53px;}
+ASIDE .Contactenos { background-position: -190px -87px; width: 61px; height: 45px;}
+ASIDE H4 { font: 4em/40px "source_sans_proregular", Arial, Helvetica, sans-serif; color: #777; text-align: center; margin-bottom: 16px; letter-spacing: -1px; text-transform: lowercase }
+ASIDE LI { width: 100%; border-top: 1px solid #c8c9ca;}
+ASIDE LI A { display: block; padding-left: 21px; color: #5e5e5e; font: 2em/22px "source_sans_proregular", Arial, Helvetica, sans-serif; padding-top: 12px; padding-bottom: 12px; background: url(../images/layout/nav-arrow.png) no-repeat 210px 11px }
+ASIDE LI A:hover { background-position: 210px -55px; color: #3471a6;}
+ASIDE LI A.Selected {background-position: 210px -55px; background-color: #ececec; color: #3471a6; font-family: "source_sans_prosemibold", Arial, Helvetica, sans-serif}
+ASIDE .Servicios + H4 + UL LI A { background-position: 225px 11px }
+ASIDE .Servicios + H4 + UL LI A:hover { background-position: 225px -55px }
+ASIDE .Servicios + H4 + UL LI A.Selected { background-position: 225px -55px }
+/**/
+.Content { width: 620px; float: right; margin-top: 31px; margin-bottom: 31px; }
+.Breadcrumb { border-top: 1px solid #babbbd; border-bottom: 1px solid #babbbd; font-size: 1.3em; line-height: 15px; color: #5e5e5e; padding-top: 16px; padding-bottom: 16px; }
+.Breadcrumb A {color: #5e5e5e; margin-left: 5px; margin-right: 5px;}
+.Breadcrumb A:first-child { margin-left: 0}
+.Breadcrumb STRONG { font-family: "source_sans_proregular", Arial, Helvetica, sans-serif; font-weight: normal; margin-left: 5px; margin-right: 5px;}
+.Data { padding-bottom: 50px;}
+.Data H2 { border-bottom: 1px solid #babbbd; color: #3471a6; font: 5em/50px "source_sans_proregular", Arial, Helvetica, sans-serif; padding-top: 24px; padding-bottom: 18px; margin-bottom: 26px; }
+.Data H2 IMG { position: relative; margin-right: 15px; top: -6px; margin-bottom: -6px; height: 57px; width: auto;}
+.Data P { font-size: 1.8em; line-height: 22px; color: #5e5e5e; margin-bottom: 26px;}
+.Data P SMALL { font-size: 0.9em;}
+.Data P A { color: #3471a6;}
+.Data UL {margin-bottom: 26px;}
+.Data LI {font-size: 1.8em; line-height: 24px; color: #5e5e5e;}
+.Data LI A {color: #3471a6;}
+.Data .ListDestacado {margin-bottom: 26px;}
+.Data .ListDestacado LI {font-size: 1.8em; line-height: 22px; color: #5e5e5e; margin-bottom: 26px; padding-left: 26px; background: url(../images/layout/vinieta.png) no-repeat 0 6px;}
+.Data .ListDestacado LI STRONG { font: normal 1.3em/24px "source_sans_proregular", Arial, Helvetica, sans-serif; color: #3471a6; display: inline-block; padding-bottom: 7px; }
+.Data H3 {font: 2.5em/27px "source_sans_proregular", Arial, Helvetica, sans-serif; color: #3471a6;}
+.Block { border-bottom: 1px solid #babbbd;}
+.Block H3 { height: 55px; position: relative; padding-top: 15px; cursor: pointer }
+.Block H3 .Toggle { background: url(../images/layout/sprite.png) no-repeat -190px -35px; width: 37px; height: 27px; display: block; position: absolute; top: 15px; right: 8px}
+.Block H3.selected .Toggle { background-position: -190px 0}
+.Block .Inner { padding-bottom: 30px; padding-top: 10px;}
+.Data H2 + #Acordion { margin-top: -20px;}
+/**/
+.Negocios { overflow: hidden}
+.Negocios .Row { overflow: hidden}
+.Negocios .Box { width: 50%; float: left}
+.Negocios H4 { font: 2.2em/24px "source_sans_proregular", Arial, Helvetica, sans-serif; color: #3471a6; margin-bottom: 8px; }
+.Negocios .Icon { display: block; width: 40px; height: 39px; margin-bottom: 15px; background: url(../images/layout/sprite.png) no-repeat}
+.Negocios .Icon1 { background-position: 0 -221px}
+.Negocios .Icon2 { background-position: -50px -221px}
+.Negocios .Icon3 { background-position: -100px -221px}
+.Negocios .Icon4 { background-position: -150px -221px}
+.Negocios .Icon5 { background-position: -200px -221px}
+.Negocios .Icon6 { background-position: -250px -221px}
+/**/
+.ServTable { width: 100%; margin-bottom: 36px;}
+.ServTable TH { font: 1.8em/20px "source_sans_prosemibold", Arial, Helvetica, sans-serif; color: #fff; background: #3471a6; text-align: center; padding-top: 13px; padding-bottom: 13px; }
+.ServTable TH:nth-child(1) { padding-left: 11px; text-align: left; width: 40%}
+.ServTable .Thead TH { background: #fff; color: #3471a6;}
+.ServTable .Thead TH:nth-child(2) { background: #ededed;}
+.ServTable TD {font: 1.8em/20px "source_sans_proregular", Arial, Helvetica, sans-serif; color: #5e5e5e; text-align: center; border-bottom: 1px solid #babbbd; padding-top: 13px; padding-bottom: 13px;}
+.ServTable TD:nth-child(1) { padding-left: 11px; text-align: left; width: 40%}
+/**/
+.Leyenda {font: 1.8em/20px "source_sans_proregular", Arial, Helvetica, sans-serif;}
+FIELDSET P { float: left} 
+FIELDSET P LABEL { display: block; padding-bottom: 5px;}
+FIELDSET P:nth-child(1),
+FIELDSET P:nth-child(3) { padding-right: 15px;}
+FIELDSET INPUT[type="text"] { padding-left: 11px; font-size: 0.8em; line-height: 16px; height: 34px; width: 302px;}
+FIELDSET INPUT[type="text"]:focus {-webkit-box-shadow: 0 0 2px 2px #7b97b0; box-shadow: 0 0 2px 2px #7b97b0;}
+FIELDSET TEXTAREA { padding-left: 11px; font-size: 0.8em; line-height: 16px;; padding-right: 11px; height: 86px; width: 620px; padding-top: 8px; padding-bottom: 8px;}
+FIELDSET TEXTAREA:focus {-webkit-box-shadow: 0 0 2px 2px #7b97b0; box-shadow: 0 0 2px 2px #7b97b0;}
+.Action { width: 100%; text-align: right; overflow: hidden; clear: both;}
+INPUT[type="submit"] { background: #3471a6; color: #fff; font-size: 1.5em; font-family: "source_sans_proregular", Arial, Helvetica, sans-serif; border: none; text-transform: uppercase; height: 40px; width: 127px; margin-top: 20px;}
+/**/
+.Logos { margin-bottom: 44px;}
