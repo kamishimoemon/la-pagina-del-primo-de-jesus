@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HYNET</title>
+	<meta name="description" content="">
+	<link href="fonts/fonts.css" rel="stylesheet" type="text/css">
+	<link href="css/layout.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js?render=6LeHp60fAAAAADKsF-2X79rqEwoWxCiXIw9cBbaR"></script>
+</head>
+<body>
+	<header>
+		<div class="Wrapper">
+			<h1><a href="index.html">HYNET</a></h1>
+			<nav>
+				<ul>
+					<li><a href="index.html" class="">HOME</a></li>
+					<li><a href="consolidacion.html" class="">SOLUCIONES</a></li>
+					<li><a href="servicios.html" class="">SERVICIOS</a></li>
+					<li><a href="contactenos.html" class="">CONTÁCTENOS</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<figure class="MainPic">
+		<img src="images/contactenos/bg-header.jpg" width="1280" height="169" alt="">
+	</figure>
+
+	<div class="Wrapper">
+		<aside>
+			<i class="Icon Contactenos"></i>
+			<h4>Contáctenos</h4>
+		</aside>
+		<section class="Content">
+			<p class="Breadcrumb"><a href="index.html">HOME</a> | <strong>CONTÁCTENOS</strong></p>
+			<div class="Data">
+				<h2>CONTACTOS Y CONSULTAS</h2>
+				<p class="Leyenda">Envianos tus datos y tu consulta, y nos pondremos en contacto contigo a la brevedad.</p>
+				<form action="mailContacto.html" method="post" name="contacto" id="contacto">
+					<fieldset>
+						<p>
+							<label for="nombre">Nombre</label>
+							<input name="nombre" type="text" id="nombre" placeholder="Nombre">
+						</p>
+						<p>
+							<label for="email">Email</label>
+							<input name="email" type="text" id="email" placeholder="nombre@dominio.com">
+						</p>
+						<p>
+							<label for="empresa">Empresa</label>
+							<input name="empresa" type="text" id="empresa" placeholder="Empresa">
+						</p>
+						<p>
+							<label for="telefono">Teléfono</label>
+							<input name="telefono" type="text" id="telefono" placeholder="+54(11)11112222">
+						</p>
+						<p>
+							<label for="comentarios">Comentarios</label>
+							<textarea name="comentarios" id="comentarios" placeholder="Ingresar"></textarea>
+						</p>
+					</fieldset>
+					<div class="Action">
+						<input type="submit" name="Enviar" id="Enviar" value="Enviar Datos">
+					</div>
+				</form>
+			</div>
+		</section>
+	</div>
+
+	<section class="Frase">
+		<div class="Wrapper">
+			<i class="Icon"></i>
+			<p> HYNET es una empresa argentina, con más de 20 años de trayectoria en la industria de la Tecnología de la Información.</p>
+			<a href="acerca-de-hynet.html">[<span>Acerca de HYNET</span>]</a>
+		</div>
+	</section>
+
+	<footer>
+		<div class="Wrapper">
+			<p>Peru 345 Piso 7 | C1067AAG | Ciudad Autónoma de Buenos Aires | Argentina | T +54 11 5128-1000 +54 11 5272-0200 (Soporte Tecnico)<br><a href="mailto:info@hynet.com.ar">info@hynet.com.ar</a> | HYNET Copyright 2008© | Todos los derechos reservados</p>
+			<ul>
+				<li><a href="http://ar.linkedin.com/company/hynet-s.a.?trk=ppro_cprof" target="_blank" class="LK">Linkedin</a></li>
+				<li><a href="mailto:info@hynet.com.ar" target="_blank" class="EM">E-Mail</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+	<script type="text/javascript" src="js/jquery.accordion.js"></script>
+	<script type="text/javascript" src="js/funciones.js"></script>
+
+<script>
+$("#Enviar").click(function (e) {
+	e.preventDefault();
+	enviar();
+});
+
+function enviar () {
+	if (validacion()) {
+		grecaptcha.ready(function() {
+			grecaptcha.execute('6LeHp60fAAAAADKsF-2X79rqEwoWxCiXIw9cBbaR', {
+				action: 'EnviarMail'
+			}).then(function(token) {
+				$('#contacto').prepend('<input type="hidden" name="token" value="' + token + '" >');
+				$('#contacto').prepend('<input type="hidden" name="action" value="EnviarMail" >');
+				$('#contacto').submit();
+			});
+		});
+	}
+}
+
+function validacion () {
+	let estado = true;
+
+	if (document.contacto.nombre.value == "") estado = false;
+	if (document.contacto.empresa.value == "") estado = false;
+	if (document.contacto.email.value == "") estado = false;
+	if (document.contacto.telefono.value == "") estado = false;
+	if (document.contacto.comentarios.value == "") estado = false;
+
+	if (estado == false) {
+		alert("Debe completar todos los datos solicitados.")
+		estado = false;
+	}
+	else if (!validaEmail(document.contacto.email.value)) {
+		estado = false;
+	}
+
+	return estado;
+}
+
+function validaEmail (addr) {
+	let invalidChars = '\/\'\\ ";:?!()[]\{\}^|';
+
+	for (i = 0; i < invalidChars.length; i++) {
+		if (addr.indexOf(invalidChars.charAt(i),0) > -1) {
+			alert("La direccion ingresada tiene caracteres no pedrmitidos.");
+			return false;
+		}
+	}
+
+	for (i = 0; i < addr.length; i++) {
+		if (addr.charCodeAt(i) > 127) {
+			alert("La direccion ingresada tiene caracteres no pedrmitidos.");
+			return false;
+		}
+	}
+
+	let atPos = addr.indexOf('@', 0);
+
+	if (atPos == -1) {
+		alert('La direccion de E-mail es incorrecta');
+		return false;
+	}
+
+	atPos = addr.indexOf('.', 0);
+	if (atPos == -1) {
+		alert('La direccion de E-mail es incorrecta');
+		return false;
+	}
+
+	return true;
+}
+</script>
+</body>
+</html>
