@@ -86,7 +86,16 @@ $(function(){
 	   group.height(tallest);
 	}
 	//equalHeight($(".Column"));
-	
+
+	$('include').each(function () {
+		const self = this;
+		$.get(self.getAttribute('href'), function (tpl) {
+			self.outerHTML = tpl;
+			if (self.hasAttribute('onload')) {
+				$.globalEval(self.getAttribute('onload'));
+			}
+		});
+	});
 });
 
 /*ANCHOR*/
@@ -108,4 +117,8 @@ jQuery.fn.anchorAnimate = function(settings) {
 		  	return false;
 		})
 	})
+}
+
+function selectHeader (href) {
+	$(`header nav a[href='${href}']`).addClass('Selected');
 }
